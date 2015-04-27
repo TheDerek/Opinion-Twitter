@@ -1,0 +1,12 @@
+.page-header
+	%h1 Opinion of #{@search_term}
+	%a.btn.btn-default{href: '/'}
+		%span.glyphicon.glyphicon-chevron-left
+		Get another Opinion
+
+%h1
+	#{get_rating(@search_term, Date.today)}%
+	%small
+		of people on twitter like
+		%em #{@search_term}
+		on #{DateTime.now.strftime('%A, %d %b %Y %l:%M %p')}.

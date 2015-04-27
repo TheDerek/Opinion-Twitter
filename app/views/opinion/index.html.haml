@@ -1,0 +1,6 @@
+.vertical-center
+	.search-content
+		%h2 What do you want twitters opinion on?
+		.search_box
+			=bootstrap_form_tag url: '/opinion', method: :get, enforce_utf8: false do |f|
+				=f.text_field :q, hide_label: true
